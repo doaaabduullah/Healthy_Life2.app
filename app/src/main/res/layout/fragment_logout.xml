@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Logout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image5"
+    tools:context=".Logout">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/logout0"
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="373dp"
+        android:fontFamily="@font/atma_semibold"
+        android:gravity="center"
+        android:text="@string/are_you_sure_you_want_to_log_out"
+        android:textColor="#009688"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btnlogout"
+        android:layout_width="135dp"
+        android:layout_height="77dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="231dp"
+        android:layout_marginBottom="256dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="@string/yes" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="131dp"
+        android:layout_height="77dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="253dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="@string/No" />
+
+</RelativeLayout>

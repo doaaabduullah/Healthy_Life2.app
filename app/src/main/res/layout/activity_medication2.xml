@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image5"
+    android:orientation="vertical"
+    android:outlineSpotShadowColor="@color/purple_200"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:src="@drawable/ic_baseline_medication_liquid_24" />
+
+    <TextView
+        android:id="@+id/textViewPizza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/denk_one"
+        android:gravity="center"
+        android:shadowColor="@color/purple_200"
+        android:text="Choose you The Mrdication"
+        android:textColor="#343F80"
+        android:textColorHighlight="@color/purple_200"
+        android:textSize="45dp" />
+
+    <CheckBox
+        android:id="@+id/cbthin"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Thin CrustParadise Herbs"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/cbdbcheese"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Live Extension"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:fontFamily="@font/denk_one"
+        android:text="Choose your topping"
+        android:textColor="#384487"
+        android:textSize="25dp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbveg"
+            android:layout_width="94dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Small"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbchicken"
+            android:layout_width="wrap_content"
+            android:layout_height="98dp"
+            android:layout_weight="1"
+            android:text="middle"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbmutton"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:layout_weight="1"
+            android:text="Big"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnorder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:fontFamily="@font/denk_one"
+        android:text="SUBMIT YOUR ORDER"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

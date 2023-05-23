@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".anemia_fragment"
+    android:background="@drawable/img_5">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:fontFamily="@font/atma_semibold"
+        android:gravity="center"
+        android:text="Diet for people with anemia"
+        android:textColor="#87445A"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:fontFamily="@font/amita_bold"
+        android:text="breakfast:"
+        android:textColor="#B15E7A"
+        android:textSize="23dp" />
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:textColor="#853F57"
+        android:text="A glass of orange juice,Strawberry fruit with a cup of low-fat yogurt, and some sunflower seeds."
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:fontFamily="@font/amita_bold"
+        android:text="Lunch:"
+        android:textColor="#B15E7A"
+        android:textSize="23dp" />
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:text="Grilled beef and watercress sandwich on iron enriched bread."
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:fontFamily="@font/amita_bold"
+        android:text="Dinner:"
+        android:textColor="#B15E7A"
+        android:textSize="23dp" />
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:text="A soup of beans, chickpeas and peas, with chopped onions, adding cheese or any of the low-fat dairy products."
+        android:textSize="18dp" />
+
+</LinearLayout>

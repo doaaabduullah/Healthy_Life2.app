@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loss_weight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_2"
+    android:orientation="vertical"
+    tools:context=".loss_weight">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="The best diet for weight loss.If you are looking for a suitable diet to lose weight significantly in a short period, here is an effective and safe diet that includes healthy, balanced and varied meals."
+        android:textColor="#FF000000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/text_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  First week:"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breakfast: 2 boiled eggs - a loaf of toast - a cup of green tea - a loaf of toast. Lunch: grilled or boiled chicken breast - 3 tablespoons of rice - a large mixed salad dish.Dinner: a large cup of fat-free yogurt - flaxseed - a large mixed salad dish - two fruits of your choice"
+        android:textColor="@color/purple_700"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/text_view4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  second week:"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_view5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breakfast: a loaf of toast - a cup of milk, provided it is fat-free and without sugar - a fruit of your choice - a cup of green tea. Lunch: a can of tuna without oil - a large mixed dish - two fruits of your choice.  Dinner: vegetable soup without broth - a cup of fat-free yogurt."
+        android:textColor="@color/purple_700"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_view7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  the third week:"
+        android:textColor="#009688"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_view6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breakfast: a piece of cottage cheese - two cucumbers - 4 tablespoons of beans without oil. Lunch: two grilled fish - a large mixed salad dish - 3 tablespoons of rice or pasta - pineapple juice without sugar. Dinner: a plate of vegetable soup only."
+        android:textColor="@color/purple_700"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:text="Contact us to get more diets"
+        android:textColor="#FF000000" />
+
+
+
+
+
+
+</LinearLayout>

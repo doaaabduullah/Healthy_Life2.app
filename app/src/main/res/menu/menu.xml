@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"
+            />
+
+
+        <item
+            android:id="@+id/loss_weight"
+            android:icon="@drawable/ic_baseline_food_bank_24"
+            android:title="loss_weight_Diet"
+            />
+
+
+
+
+
+
+        <item android:title="Disease_Diet">
+            <menu>
+                <item android:id="@+id/anemia"
+                    android:icon="@drawable/ic_baseline_bloodtype_24"
+                    android:title="anemia" />
+                <item
+                    android:id="@+id/Osteoporosis"
+                    android:icon="@drawable/ic_baseline_assist_walker_24"
+                    android:title="Osteoporosis" />
+                <item
+                    android:id="@+id/blood_pressure"
+                    android:icon="@drawable/ic_baseline_pending_actions_24"
+                    android:title="blood pressure" />
+
+
+
+
+            </menu>
+
+        </item>
+
+
+
+
+        <item android:title="Other options help">
+        <menu>
+
+        <item
+            android:id="@+id/drinks"
+            android:icon="@drawable/ic_baseline_local_drink_24"
+            android:title="Fat_burning_drinks" />
+
+
+            />
+        <item
+            android:id="@+id/contactus"
+            android:icon="@drawable/ic_baseline_local_phone_24"
+            android:title="Contact Us" />
+
+        </menu>
+
+        </item>
+
+
+
+    </group>
+
+
+
+</menu>

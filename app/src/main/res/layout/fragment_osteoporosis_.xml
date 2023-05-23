@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_4"
+    android:orientation="vertical"
+    tools:context=".Osteoporosis_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:fontFamily="@font/atma_semibold"
+        android:gravity="center"
+        android:text="Diet for people with Osteoporosis"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="     The diet consists of fruits, vegetables, whole grains, legumes, fish, yogurt, healthy fats such as olive oil, and nuts.People can make simple changes to their system:"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="start"
+        android:text=" 1-Eat foods high in fiber and starches, such as sweet potatoes, yams, beans, lentils, and whole grain bread and pasta."
+        android:textColor="?attr/colorError"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="start"
+        android:text=" 2-Eat plenty of fruits and vegetables during the day."
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="start"
+        android:text=" 3-Include fish in the diet."
+        android:textColor="?attr/colorError"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="start"
+        android:text=" 4-Eat less meat."
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="start"
+        android:text=" 5-Choose whole grain products over those that contain refined flour."
+        android:textColor="?attr/colorError"
+        android:textSize="20sp" />
+
+</LinearLayout>
+
+
+
+
+
+
+

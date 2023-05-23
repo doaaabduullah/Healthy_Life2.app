@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_11"
+    android:orientation="vertical"
+    tools:context=".blood_pressure_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:fontFamily="@font/atma_semibold"
+        android:gravity="center"
+        android:text="Diet for people with high blood pressure"
+        android:textColor="#3C493B"
+        android:textSize="34sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="@color/ic_launcher_background"
+        android:fontFamily="@font/denk_one"
+        android:text="This diet is mainly based on reducing the amount of sodium consumed daily and replacing it with foods rich in potassium, calcium and magnesium."
+        android:textSize="21sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/ic_launcher_background"
+        android:fontFamily="@font/denk_one"
+        android:text="1-Reducing the use of table salt, as well as avoiding salty foods such as: pickles, salty cheese, nuts, salty bread, smoked and canned meats, such as sausages, meat extract, sardines, and pickled meats."
+        android:textColor="#31154E"
+        android:textSize="21sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:background="@color/ic_launcher_background"
+        android:fontFamily="@font/denk_one"
+        android:text="2-Foods high in carbohydrates are foods rich in carbohydrates, cereals, breads, saltines and bagels."
+        android:textColor="#31154E"
+        android:textSize="21sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/ic_launcher_background"
+        android:fontFamily="@font/denk_one"
+        android:text="3-Eat a lot of fruits and vegetables daily, because of their health benefits that provide the body with potassium, magnesium, antioxidants, and fiber."
+        android:textColor="#31154E"
+        android:textSize="21sp" />
+
+
+</LinearLayout>
+
+
+
