@@ -1,5 +1,6 @@
 package com.example.healthylife2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -54,10 +55,11 @@ public class Login extends AppCompatActivity {
                     // Read the data from the user's data reference
                     userRef.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             // Check if the user exists and if the password matches
                             if (dataSnapshot.exists()) {
                                 String storedPass = dataSnapshot.child("password").getValue(String.class);
+                                assert storedPass != null;
                                 if (storedPass.equals(pass)) {
                                     Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), home11.class);
@@ -71,8 +73,8 @@ public class Login extends AppCompatActivity {
                         }
 
                         @Override
-                        public void onCancelled(DatabaseError databaseError) {
-                            // Handle any errors
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
                             Toast.makeText(Login.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
