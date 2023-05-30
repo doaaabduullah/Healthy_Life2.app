@@ -18,7 +18,6 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     EditText username, password, repassword, phone;
     Button btnSignIn, btnSignUp;
-    DBHelper myDB;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
@@ -32,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         btnSignIn = findViewById(R.id.button);
         btnSignUp = findViewById(R.id.button2);
         phone = findViewById(R.id.phone);
-
-        myDB = new DBHelper(this);
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,38 +49,28 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Fill all the fields", Toast.LENGTH_SHORT).show();
                 } else {
                     if (pass.equals(repass)) {
-                        boolean usercheckResult = myDB.checkUsername(user);
-                        if (!usercheckResult) {
-                            boolean regResult = myDB.insertData(user, pass, pho);
-                            if (regResult) {
-                                Toast.makeText(MainActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(MainActivity.this, home11.class);
-                                startActivity(intent);
-                            } else {
-                                Toast.makeText(MainActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-                            Toast.makeText(MainActivity.this, "User already exists. \n Please sign in", Toast.LENGTH_SHORT).show();
-                        }
+                        // Get a reference to the Firebase database
+                        DatabaseReference usersRef = database.getReference("users");
+
+                        // Create a new child node in the "users" table
+                        DatabaseReference userRef = usersRef.child(user);
+
+                        // Create a data object with the user's details
+                        Map<String, Object> userData = new HashMap<>();
+                        userData.put("username", user);
+                        userData.put("password", pass);
+                        userData.put("phone", pho);
+
+                        // Set the data for the user
+                        userRef.setValue(userData);
+
+                        Toast.makeText(MainActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, home11.class);
+                        startActivity(intent);
                     } else {
                         Toast.makeText(MainActivity.this, "Password not matching.", Toast.LENGTH_SHORT).show();
                     }
                 }
-
-                // Get a reference to the Firebase database
-                DatabaseReference usersRef = database.getReference("users");
-
-                // Create a new child node in the "users" table and generate a unique key
-                String userId = usersRef.push().getKey();
-
-                // Create a data object with the user's details
-                Map<String, Object> userData = new HashMap<>();
-                userData.put("username", user);
-                userData.put("password", pass);
-                userData.put("phone", pho);
-
-                // Store the data in the "users" table under the generated key
-                usersRef.child(user).setValue(userData);
             }
         });
 

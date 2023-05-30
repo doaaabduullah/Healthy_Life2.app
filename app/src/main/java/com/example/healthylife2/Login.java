@@ -2,6 +2,7 @@ package com.example.healthylife2;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,10 +10,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class Login extends AppCompatActivity {
-    Button btnlogin,btnback;
+    Button btnlogin, btnback;
     EditText username, password;
-    DBHelper myDB;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +30,6 @@ public class Login extends AppCompatActivity {
         btnback = findViewById(R.id.button6);
         username = findViewById(R.id.editTextTextPersonName4);
         password = findViewById(R.id.editTextTextPersonName5);
-
-        myDB = new DBHelper(this);
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,14 +45,37 @@ public class Login extends AppCompatActivity {
                 if (user.equals("") || pass.equals("")) {
                     Toast.makeText(Login.this, "Please enter the credentials", Toast.LENGTH_SHORT).show();
                 } else {
-                    Boolean result = myDB.checkUsernamePassword(user, pass);
-                    if (result == true
-                    ) {
-                        Intent intent1 = new Intent(getApplicationContext(), home11.class);
-                        startActivity(intent1);
-                    } else {
-                        Toast.makeText(Login.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
-                    }
+                    // Get a reference to the Firebase database
+                    DatabaseReference usersRef = database.getReference("users");
+
+                    // Get the reference to the user's data
+                    DatabaseReference userRef = usersRef.child(user);
+
+                    // Read the data from the user's data reference
+                    userRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            // Check if the user exists and if the password matches
+                            if (dataSnapshot.exists()) {
+                                String storedPass = dataSnapshot.child("password").getValue(String.class);
+                                if (storedPass.equals(pass)) {
+                                    Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), home11.class);
+                                    startActivity(intent);
+                                } else {
+                                    Toast.makeText(Login.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+                                }
+                            } else {
+                                Toast.makeText(Login.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                            // Handle any errors
+                            Toast.makeText(Login.this, "Error: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
             }
         });
@@ -56,19 +85,9 @@ public class Login extends AppCompatActivity {
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Login.this,MainActivity.class);
+                Intent intent = new Intent(Login.this, MainActivity.class);
                 startActivity(intent);
             }
         });
     }
-
-
-
-
 }
-
-
-
-
-
-

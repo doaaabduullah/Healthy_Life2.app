@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class home11 extends AppCompatActivity {
     Button move, button, Move2, Move3;
-    DBHelper myDB;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
